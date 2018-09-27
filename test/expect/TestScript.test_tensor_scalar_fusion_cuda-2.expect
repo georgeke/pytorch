@@ -1,8 +1,8 @@
 graph(%x : Float(*, *)
       %z : Float()) {
-  %2 : int = prim::TensorToNum(%z)
-  %3 : int = prim::Constant[value=1]()
-  %y : Float(*, *) = aten::add(%x, %2, %3)
-  %5 : Float(*, *) = aten::mul(%x, %y)
-  return (%5);
+  %3 : int = prim::TensorToNum(%z)
+  %4 : int = prim::Constant[value=1]()
+  %y : Float(*, *) = aten::add(%x, %3, %4)
+  %6 : Float(*, *) = aten::mul(%x, %y)
+  return (%6);
 }
